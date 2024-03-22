@@ -12,8 +12,8 @@
 t = input().split()
 m = input().split()
 
-tupla1 = tuple(t)
-tupla2 = tuple(m)
+tupla1 = tuple(int(x) if x.isdigit() else x for x in t)
+tupla2 = tuple(int(x) if x.isdigit() else x for x in m)
 
 tupla_final = (tupla2+tupla1+tupla2)
 print(tupla_final)
