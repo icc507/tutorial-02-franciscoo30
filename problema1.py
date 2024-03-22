@@ -15,7 +15,7 @@ m = input().split()
 tupla1 = tuple(t)
 tupla2 = tuple(m)
 
-tupla_final = (tupla1+tupla2+tupla1)
+tupla_final = (tupla2+tupla1+tupla2)
 print(tupla_final)
 
 
