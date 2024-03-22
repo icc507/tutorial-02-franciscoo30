@@ -23,25 +23,14 @@ def insertaEnArbolTrinario(arbol,numero):
 	else:
 		insertaEnArbolTrinario(arbol[3],numero)
 
-def estaEnArbolTrinario(arbol,numero):
-	if arbol==[]:
-		return False
-	elif numero==arbol[0]:
-		return True	
-	elif numero<arbol[0]:
-		return estaEnArbolTrinario(arbol[1],numero)
-	else:
-		return estaEnArbolTrinario(arbol[3],numero)
-
 lista = input().split()
-print(lista)
 
 lista2 = [int(x) if x.isdigit() else x for x in lista]
 
 arbol = arbolTrinario(lista2[0])
 
-for x in lista2:
-	insertaEnArbolTrinario(arbol, x)
+for x in range(1,len(lista2)):
+	insertaEnArbolTrinario(arbol, lista2[x])
 
 print(arbol)
 
